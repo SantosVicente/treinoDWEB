@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+  --background-color: rgb(10, 10, 10);
+  --color-primary: rgb(220, 38, 38);
+  --color-secondary: rgb(52, 16, 16);
+  --text-color: rgb(255, 255, 255);
+  --text-secondary-color: rgb(150, 150, 158);
+  --border-color: rgb(38, 38, 38);
+}
+
+.root {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  max-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  height: 4rem;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: .5rem;
+}
+
+a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+a:hover {
+  color: var(--text-color);
+}
+
+.container {
+  background-color: var(--background-color);
+  display: flex;
+  height: calc(100vh - 4rem);
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  background-color: var(--background-color);
+  padding: 2rem 1rem;
+  border-radius: .4rem;
+  width: 20rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.form-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form-header h6 {
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--text-secondary-color);
+}
+
+.divider-control {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.text-form {
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--text-secondary-color);
+}
+
+.text-form span {
+  word-wrap:  break-word;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--border-color);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.form-control label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form-control input {
+  padding: .5rem;
+  border: 1px solid var(--border-color);
+  border-radius: .4rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  width: 100%;
+  transition: all .2s ease-in-out;
+}
+
+.form-control input:focus {
+  outline: none;
+  border: 1px solid var(--color-primary);
+}
+
+.consult-control, .submit-control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.consult-control a, .submit-control input {
+  padding: .7rem 0rem;
+  border-radius: .4rem;
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.consult-control a:hover, .submit-control input:hover {
+  opacity: .8;
+}
+
+.consult-control a span {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

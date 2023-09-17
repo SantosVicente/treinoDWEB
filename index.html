@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UserCad.io</title>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <div class="root">
+    <header>
+      <div class="logo">
+        <h1>UserCad.io</h1>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Sign Up</a></li>
+          <li><a href="/">GitHub</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+      <form
+        action="http://localhost:5000/server/postUser.php"
+        method="get"
+        class="formulario"
+      >
+        <div class="form-header">
+          <h2>Create an account</h2>
+          <h6>insira os dados necessários abaixo para criar sua conta</h6>
+        </div>
+        <div class="divider-control">
+          <div class="divider"></div>
+          <div class="text-form">
+            <span>DADOS</span>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-control">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-control">
+          <label for="phoneNo">Telefone</label>
+          <input type="tel" id="phoneNo" name="phoneNo" required>
+        </div>
+        <div class="form-control">
+          <label for="pass">Senha</label>
+          <input type="password" id="pass" name="pass" required>
+        </div>
+        <div class="form-control">
+          <label for="pfp" class="file-input-label">Foto de Perfil (URL)</label>
+          <input type="text" id="pfp" name="pfp">
+        </div>
+        <div class="submit-control">
+          <input type="submit" value="Cadastrar">
+        </div>
+        <div class="consult-control">
+          <a href="http://localhost:5000/server/getUsers.php"><span>Consultar</span></a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts/index.js"></script>
+</body>
+</html>
