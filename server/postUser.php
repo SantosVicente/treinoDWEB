@@ -7,6 +7,7 @@
   $email = $_GET["email"];
   $phoneNo = $_GET["phoneNo"];
   $pass = $_GET["pass"];
+  $pfp = $_GET["pfp"];
 
   $hostname = "localhost"; 
   $user = "root";
@@ -20,7 +21,11 @@
   }
   echo "Conexão feita com sucesso";
 
-  $query = "insert into usuario (username, email, phoneNo, pass) values ('$username', '$email', '$phoneNo', '$pass')";
+  if($pfp != null) {
+    $query = "insert into usuario (username, email, phoneNo, pass, pfpImage) values ('$username', '$email', '$phoneNo', '$pass', '$pfp')";
+  } else {
+    $query = "insert into usuario (username, email, phoneNo, pass) values ('$username', '$email', '$phoneNo', '$pass')";
+  }
 
   $res = mysqli_query($conn, $query);
   if($res){
